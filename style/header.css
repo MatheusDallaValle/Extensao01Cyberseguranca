@@ -1,0 +1,23 @@
+header {
+  background: #F8F9FA;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header #logo h1 {
+  color: #007BFF;
+}
+header #menu {
+  display: flex;
+  height: 24px;
+}
+header #menu ul {
+  display: flex;
+  height: 100%;
+}
+header #menu ul li a {
+  text-decoration: none;
+  color: #212529;
+}
+
+/*# sourceMappingURL=header.css.map */
