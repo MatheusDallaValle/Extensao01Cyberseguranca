@@ -9,11 +9,11 @@ header #logo h1 {
 }
 header #menu {
   display: flex;
-  height: 24px;
 }
 header #menu ul {
   display: flex;
   height: 100%;
+  margin: 0;
 }
 header #menu ul li a {
   text-decoration: none;

@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"game.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/game.sass","../sass/_variables.sass"],"names":[],"mappings":"AACA;EACI;;AACA;EACI;EACA,YCHQ;;ADIR;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;;AACJ;EACI;;AACZ;EACI,YCdM;EDeN;EACA;EACA,OCpBS;;ADqBb;EACI","file":"game.css"}
