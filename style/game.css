@@ -18,14 +18,6 @@ html main #requisitos #r1, body main #requisitos #r1 {
 html main #requisitos #r2, body main #requisitos #r2 {
   color: #FF0000;
 }
-html footer, body footer {
-  background: #343A40;
-  width: 100%;
-  height: 75px;
-  color: #F8F9FA;
-}
-html p, body p {
-  margin: 0;
-}
+
 
 /*# sourceMappingURL=game.css.map */

@@ -1,8 +1,14 @@
+html, body{
+  height: 100%;
+  width: 100%;
+}
+/*header*/
 header {
   background: #F8F9FA;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  height: 10%;
 }
 header #logo h1 {
   color: #007BFF;
@@ -18,6 +24,24 @@ header #menu ul {
 header #menu ul li a {
   text-decoration: none;
   color: #212529;
+  transition: .5s;
+}
+
+header #menu ul li a:hover{
+  transform: scale(1.1);
+  color: #007BFF;
+}
+
+/*barra de scroll*/
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=header.css.map */

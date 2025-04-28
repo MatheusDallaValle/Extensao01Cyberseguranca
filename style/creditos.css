@@ -1,0 +1,29 @@
+main{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E9F7FD;
+}
+
+#titulo h1 {
+    color: #007BFF;
+}
+
+#devs p{
+    color: #212529;
+}
+#devs p img{
+    width: 40px;
+}
+.roxo{
+    color: #6f42c1;
+}
+.rosa{
+    color: #cd6799;
+}
+.vermelho{
+    color: #FF2C2C;
+}
