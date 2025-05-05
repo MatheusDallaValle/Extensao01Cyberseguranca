@@ -1,7 +1,6 @@
 const input = document.getElementById('fname');
 const containerRequisitos = document.getElementById('requisitos');
 
-// Lista de regras com validações e descrições
 const regras = [
     {
         descricao: 'A senha deve ter no mínimo 12 caracteres',
@@ -30,20 +29,10 @@ const regras = [
     {
         descricao: 'Não pode conter sequências como "123" ou "abc"',
         validar: (senha) => {
-            const sequencias = ['123', '234', '345', 'abc', 'bcd', 'cde'];
+            const sequencias = ['123', '234', '345', '456', '567', '678', '789', '012',
+                                'abc', 'bcd', 'cde', 'def', 'efg', 'fgh', 'ghi'];
             const senhaLower = senha.toLowerCase();
             return !sequencias.some(seq => senhaLower.includes(seq));
-        }
-    },
-    {
-        descricao: 'Deve conter pelo menos 4 tipos de caracteres diferentes (maiúsculas, minúsculas, números, símbolos)',
-        validar: (senha) => {
-            let tipos = 0;
-            if (/[A-Z]/.test(senha)) tipos++;
-            if (/[a-z]/.test(senha)) tipos++;
-            if (/\d/.test(senha)) tipos++;
-            if (/[!@#$%^&*()_+\-=[\]{}|;:'",.<>/?`~]/.test(senha)) tipos++;
-            return tipos >= 4;
         }
     },
     {
@@ -71,13 +60,42 @@ const regras = [
             }
             return soma === 25;
         }
+    },
+    {
+        descricao: 'Sua senha deve incluir um símbolo de dois letras da tabela periódica (ex: He, Li, Na)',
+        validar: (senha) => {
+            const simbolos = [
+                'He','Li','Be','Ne','Na','Mg','Al','Si','Cl','Ar',
+                'Ca','Sc','Ti','Cr','Mn','Fe','Co','Ni','Cu','Zn',
+                'Ga','Ge','As','Se','Br','Kr','Rb','Sr','Zr','Nb',
+                'Mo','Tc','Ru','Rh','Pd','Ag','Cd','In','Sn','Sb',
+                'Te','Xe','Cs','Ba','La','Ce','Pr','Nd','Pm','Sm',
+                'Eu','Gd','Tb','Dy','Ho','Er','Tm','Yb','Lu','Hf',
+                'Ta','Re','Os','Ir','Pt','Au','Hg','Tl','Pb','Bi',
+                'Po','At','Rn','Fr','Ra','Ac','Th','Pa','Np','Pu',
+                'Am','Cm','Bk','Cf','Es','Fm','Md','No','Lr','Rf',
+                'Db','Sg','Bh','Hs','Mt','Ds','Rg','Cn','Fl','Lv',
+                'Ts','Og'
+            ];
+            return simbolos.some(simbolo => senha.includes(simbolo));
+        }
+    },
+    {
+        descricao: 'Sua senha deve conter um mês do ano por extenso (ex: janeiro, fevereiro...)',
+        validar: (senha) => {
+            const mesesCompletos = [
+                'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho',
+                'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'
+            ];
+            const senhaLower = senha.toLowerCase();
+            return mesesCompletos.some(mes => senhaLower.includes(mes));
+        }
     }
 ];
 
 let elementosRegras = [];
 let totalVisiveis = 1;
 
-// Cria dinamicamente o elemento de regra na tela
 function criarElementoRegra(regra, index) {
     const div = document.createElement('div');
     div.classList.add('d-flex', 'align-items-center', 'gap-2');
@@ -98,13 +116,11 @@ function criarElementoRegra(regra, index) {
     return { elemento: div, img: img };
 }
 
-// Inicializa a primeira regra
 for (let i = 0; i < totalVisiveis; i++) {
     const el = criarElementoRegra(regras[i], i);
     elementosRegras.push(el);
 }
 
-// Verifica todas as regras visíveis
 const verificarSenha = () => {
     const senha = input.value;
     let liberarProxima = true;
@@ -122,14 +138,12 @@ const verificarSenha = () => {
         }
     }
 
-    // Adiciona próxima regra se todas as anteriores estiverem corretas
     if (liberarProxima && totalVisiveis < regras.length) {
         const novaRegra = criarElementoRegra(regras[totalVisiveis], totalVisiveis);
         elementosRegras.push(novaRegra);
         totalVisiveis++;
     }
 
-    // Finaliza se todas forem cumpridas
     const todasCumpridas = totalVisiveis === regras.length &&
         elementosRegras.every((_, i) => regras[i].validar(senha));
 
