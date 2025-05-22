@@ -11,10 +11,18 @@
     gap: 50px;
     background-color: #E9F7FD;
   }
+
+  .imgSobre{
+    width: 100%;
+  }
+  .imgSobre img{
+    width: 100%;
+  }
   
   main .Titulo{
     display: flex;
     justify-content: center;
+    text-align: center;
   }
   
   main .Exemplo{
@@ -48,12 +56,11 @@
     justify-content: center;
   }
   
-  main {
-    padding: 40px 20px;
-  }
-  
   main section {
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
   
   h2 {
@@ -61,6 +68,10 @@
     margin-bottom: 15px;
   }
   
+  main p, main ul{
+    width: 60%;
+  }
+
   main p, main li {
     font-size: 1.1em;
     line-height: 1.7em;
@@ -74,4 +85,66 @@
   main ul li {
     margin-bottom: 10px;
   }
-  
+
+.backgroundWhite{
+  background-color: #E9F7FD;
+}
+
+/* Para telas até 600px */
+@media (max-width: 600px) {
+  main p, main ul {
+    width: 90%;
+    font-size: 1em;
+  }
+
+  main .Exemplo {
+    width: 90%;
+    font-size: 1em;
+    padding: 8px;
+  }
+
+  main h2 {
+    font-size: 1.5em;
+  }
+
+  main .banner h1 {
+    font-size: 2em;
+  }
+
+  main .banner img {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  main ul {
+    padding-left: 15px;
+  }
+
+  main ul li {
+    margin-bottom: 8px;
+  }
+}
+
+/* Para telas até 390px */
+@media (max-width: 390px) {
+  main p, main ul {
+    font-size: 0.9em;
+  }
+
+  main .Exemplo {
+    font-size: 0.9em;
+  }
+
+  main h2 {
+    font-size: 1.3em;
+  }
+
+  main .banner h1 {
+    font-size: 1.5em;
+  }
+
+  main .banner img {
+    width: 100%;
+    max-width: 200px;
+  }
+}

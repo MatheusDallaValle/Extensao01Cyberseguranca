@@ -18,12 +18,15 @@
     <title>Jogo - SeguraPlay</title>
 </head>
 <body>
-    <header class="p-2">
+    <header class="p-2 d-flex align-items-center">
         <div id="logo">
             <h1 class="fs-4">SeguraPlay</h1>
         </div>
-        <nav id="menu">
-            <ul class="gap-5">
+
+        <button class="menu-toggle d-md-none" aria-label="Abrir menu">&#9776;</button>
+
+        <nav id="menu" class="d-none d-md-block">
+            <ul class="gap-5 d-flex flex-column flex-md-row">
                 <li><a href="index.html"><b>Home</b></a></li>
                 <li><a href="sobre.html"><b>Sobre</b></a></li>
                 <li><a href="game.html"><b>Jogo</b></a></li>

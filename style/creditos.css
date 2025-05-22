@@ -27,3 +27,9 @@ main{
 .vermelho{
     color: #FF2C2C;
 }
+
+@media (max-width: 390px) {
+  #devs p {
+    gap: 100px;
+  }
+}

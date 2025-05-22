@@ -19,5 +19,20 @@ html main #requisitos #r2, body main #requisitos #r2 {
   color: #FF0000;
 }
 
+/*responsividade*/
+@media (max-width: 420px) {
+  main h1{
+    font-size: 18px;
+    text-align: center;
+  }
+  #fname{
+    width: 300px;
+  }
+  #requisitos{
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
 
 /*# sourceMappingURL=game.css.map */

@@ -18,12 +18,15 @@
     <title>Sobre - SeguraPlay</title>
 </head>
 <body>
-    <header class="p-2 ">
+    <header class="p-2 d-flex align-items-center">
         <div id="logo">
             <h1 class="fs-4">SeguraPlay</h1>
         </div>
-        <nav id="menu">
-            <ul class="gap-5">
+
+        <button class="menu-toggle d-md-none" aria-label="Abrir menu">&#9776;</button>
+
+        <nav id="menu" class="d-none d-md-block">
+            <ul class="gap-5 d-flex flex-column flex-md-row">
                 <li><a href="index.html"><b>Home</b></a></li>
                 <li><a href="sobre.html"><b>Sobre</b></a></li>
                 <li><a href="game.html"><b>Jogo</b></a></li>
@@ -32,7 +35,10 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="imgSobre d-flex justify-content-center">
+          <img src="img/sobrePage.svg" alt="">
+        </section>
+        <section class="backgroundWhite">
           <h2 class="Titulo">A Importância de ter Senhas Seguras</h2>
           <p>As senhas são a primeira linha de defesa contra o acesso não autorizado às suas contas. No entanto, muitas pessoas ainda utilizam senhas simples ou reutilizam a mesma senha para diferentes plataformas, o que as torna vulneráveis. Por isso, aprender a criar senhas seguras é essencial para boa proteção de dados e informações.</p>
         </section>
@@ -49,7 +55,7 @@
           <p class="Exemplo">Exemplo de uma boa senha:<strong> F@brica!c0nhec1ment0</strong></p>
         </section>
       
-        <section>
+        <section class="backgroundWhite">
           <h2 class="Titulo">A Importância da Autenticação de Dois Fatores (2FA)</h2>
           <p>Uma das maneiras mais eficazes de proteger suas contas é usar autenticação de dois fatores <strong>(2FA).</strong> Ela adiciona uma camada extra de segurança, além da sua senha.</p>
           <p>Com o <strong>2FA,</strong> mesmo que alguém descubra sua senha, ainda precisará de um segundo fator de verificação para acessar sua conta. Normalmente, esse fator é um código enviado para o seu celular via SMS, um aplicativo de autenticação (como o Google Authenticator ou o Authy) ou um e-mail.</p>
@@ -71,7 +77,7 @@
           <p>A melhor prática é criar senhas únicas para cada serviço e, se possível, usar um gerenciador de senhas para armazená-las de forma segura.</p>
         </section>
       
-        <section>
+        <section class="backgroundWhite">
           <h2 class="Titulo">Atualizando suas Senhas Regularmente</h2>
           <p>As ameaças cibernéticas estão em constante evolução. Alguns dos ataque mais comuns incluem:</p>
           <ul>
