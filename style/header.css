@@ -1,5 +1,5 @@
 *{
-  font-family: 'Sora', sans-serif;
+  font-family: 'Sora', sans-serif; 
 }
 
 html, body {
@@ -37,6 +37,7 @@ header #menu ul {
 header #menu ul li a {
   text-decoration: none;
   color: #212529;
+  font-size: 20px;
   padding: 0.5rem 1rem;
   transition: 0.5s;
 }
@@ -89,7 +90,10 @@ body::-webkit-scrollbar-thumb {
   }
 
   #menu.show {
-    display: block;
+    display: block !important;
+  }
+  #menu.show a{
+    color: #f8f9fa;
   }
 
   #menu ul {
@@ -100,4 +104,5 @@ body::-webkit-scrollbar-thumb {
   #menu ul li {
     margin: 0.5rem 0;
   }
+
 }

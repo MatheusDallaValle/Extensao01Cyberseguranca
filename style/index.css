@@ -47,6 +47,7 @@ main {
   gap: 40px;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .content-principios div {
